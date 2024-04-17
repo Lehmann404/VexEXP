@@ -1,0 +1,19 @@
+{
+	"C_Cpp.default.systemIncludePath": [
+		"${config:vexrobotics.vexcode.Cpp.Sdk.Home}\\EXP\\EXP_20240223_11_00_00\\vexexp\\gcc\\include\\sys"
+	],
+	"files.associations": {
+		"chrono": "cpp",
+		"cmath": "cpp",
+		"cstdarg": "cpp",
+		"cstdint": "cpp",
+		"cstdio": "cpp",
+		"cstdlib": "cpp",
+		"ctime": "cpp",
+		"ratio": "cpp",
+		"type_traits": "cpp",
+		"limits": "cpp",
+		"*.tcc": "cpp",
+		"typeinfo": "cpp"
+	}
+}
