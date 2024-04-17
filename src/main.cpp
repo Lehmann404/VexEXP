@@ -34,37 +34,37 @@ pwm_out laserdiode = pwm_out(Brain.ThreeWirePort.A);
 
 controller Controller = controller();
 
-  void spin(){
+  // void spin(){
 
-    LeftMotor.setVelocity(100, percent);
-    RightMotor.setVelocity(-100, percent);
+  //   LeftMotor.setVelocity(100, percent);
+  //   RightMotor.setVelocity(-100, percent);
 
-    wait(0.5, sec);
+  //   wait(0.5, sec);
 
-      LeftMotor.setVelocity(0, percent);
-      RightMotor.setVelocity(0, percent);
+  //     LeftMotor.setVelocity(0, percent);
+  //     RightMotor.setVelocity(0, percent);
 
-  wait(0.5, sec);
+  // wait(0.5, sec);
 
-       LeftMotor.setVelocity(-100, percent);
-    RightMotor.setVelocity(100, percent);
+  //      LeftMotor.setVelocity(-100, percent);
+  //   RightMotor.setVelocity(100, percent);
 
-    wait(0.5, sec);
+  //   wait(0.5, sec);
 
-      LeftMotor.setVelocity(0, percent);
-      RightMotor.setVelocity(0, percent);
+  //     LeftMotor.setVelocity(0, percent);
+  //     RightMotor.setVelocity(0, percent);
 
-        wait(0.5, sec);
+  //       wait(0.5, sec);
 
-       LeftMotor.setVelocity(100, percent);
-    RightMotor.setVelocity(-100, percent);
+  //      LeftMotor.setVelocity(100, percent);
+  //   RightMotor.setVelocity(-100, percent);
 
-    wait(0.5, sec);
+  //   wait(0.5, sec);
 
-      LeftMotor.setVelocity(0, percent);
-      RightMotor.setVelocity(0, percent);
+  //     LeftMotor.setVelocity(0, percent);
+  //     RightMotor.setVelocity(0, percent);
 
-  }
+  // }
 
 
 
@@ -75,6 +75,7 @@ int main() {
   
   // Set the deadband variable
   float deadband = 5.0;
+
 
 
   // Main controller loop to set motor velocities to controller axis positions
@@ -89,13 +90,13 @@ int main() {
     LeftMotor.spin(forward);
     RightMotor.spin(forward);
     
-  if (Controller.ButtonA.pressing()) {
-            spin();
+  if (Controller.ButtonB.pressing()) {
+            
         }
 
 if (Controller.ButtonR2.pressing()) {
-            spin();
-        }
+             
+        } 
 
     wait(20, msec);
   }
