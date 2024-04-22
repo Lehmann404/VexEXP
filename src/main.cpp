@@ -31,40 +31,10 @@ inertial BrainInertial = inertial();
 motor LeftMotor = motor(PORT6, false);
 motor RightMotor = motor(PORT10, true);
 pwm_out laserdiode = pwm_out(Brain.ThreeWirePort.A);
+bumper BumperA = bumper(Brain.ThreeWirePort.A);
 
 controller Controller = controller();
 
-  // void spin(){
-
-  //   LeftMotor.setVelocity(100, percent);
-  //   RightMotor.setVelocity(-100, percent);
-
-  //   wait(0.5, sec);
-
-  //     LeftMotor.setVelocity(0, percent);
-  //     RightMotor.setVelocity(0, percent);
-
-  // wait(0.5, sec);
-
-  //      LeftMotor.setVelocity(-100, percent);
-  //   RightMotor.setVelocity(100, percent);
-
-  //   wait(0.5, sec);
-
-  //     LeftMotor.setVelocity(0, percent);
-  //     RightMotor.setVelocity(0, percent);
-
-  //       wait(0.5, sec);
-
-  //      LeftMotor.setVelocity(100, percent);
-  //   RightMotor.setVelocity(-100, percent);
-
-  //   wait(0.5, sec);
-
-  //     LeftMotor.setVelocity(0, percent);
-  //     RightMotor.setVelocity(0, percent);
-
-  // }
 
 
 
@@ -90,13 +60,15 @@ int main() {
     LeftMotor.spin(forward);
     RightMotor.spin(forward);
     
-  if (Controller.ButtonB.pressing()) {
-            
-        }
+  if (BumperA.pressing()) {
+      LeftMotor.setVelocity(0, percent);
+      RightMotor.setVelocity(0, percent);
+      vexSoundPlayTone(20,100,3000);
+      wait(3, sec);
+    
 
-if (Controller.ButtonR2.pressing()) {
-             
-        } 
+
+        }
 
     wait(20, msec);
   }
