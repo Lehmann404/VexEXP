@@ -61,14 +61,23 @@ int main() {
     RightMotor.spin(forward);
     
   if (BumperA.pressing()) {
+      vexSoundPlayTone(10, 100, 500);
       LeftMotor.setVelocity(0, percent);
       RightMotor.setVelocity(0, percent);
-      vexSoundPlayTone(20,100,3000);
-      wait(3, sec);
-    
+      vex::color r = vex::color( 255, 0, 0 );
+      Brain.Screen.setFillColor( r );
+      Brain.Screen.drawRectangle( 0, 0, 160, 160 );
+      wait(2, sec);
+
+        } else {
+      vex::color g = vex::color( 0, 255, 0 );
+      Brain.Screen.setFillColor( g );
+      Brain.Screen.drawRectangle( 0, 0, 160, 160 );
+
 
 
         }
+
 
     wait(20, msec);
   }
